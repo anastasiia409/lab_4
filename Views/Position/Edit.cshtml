@@ -1,0 +1,22 @@
+﻿@model Position
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit position</h1>
+<form method="post" asp-action="Edit">
+	<div class"mb-3">
+		<label>Position name</label>
+		<input asp-for="Name" />
+		<span asp-validation-for="Name"></span>
+	</div>
+	<div class"mb-3">
+		<label>Salary of position</label>
+		<input asp-for="Salary" />
+		<span asp-validation-for="Salary"></span>
+	</div>
+	<button type="submit">Edit position</button>
+	<button><a asp-controller="Position" asp-action="Index">Return to all positions</a></button>
+
+</form>

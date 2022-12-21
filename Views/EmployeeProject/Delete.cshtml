@@ -1,0 +1,29 @@
+﻿@model EmployeeProject
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete information about employee's project'</h1>
+
+<form method="post" asp-action="DeletePOST">
+	<input asp-for="Id" hidden />
+	<div class"mb-3">
+		<label>Project id</label>
+		<input asp-for="ProjectId" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Employee id</label>
+		<input asp-for="EmployeeId" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Position id</label>
+		<input asp-for="PositionId" disabled />
+	</div>
+	<div class"mb-3">
+		<label>DateOfJoin</label>
+		<input asp-for="DateOfJoin" disabled />
+	</div>
+	<button type="submit">Delete information about employee's projects'</button>
+	<button><a asp-controller="EmployeeProject" asp-action="Index">Return to all employee's projects'</a></button>
+
+</form>

@@ -1,0 +1,20 @@
+﻿@model Position
+
+<h1>Add new position</h1>
+<form method="post">
+	<div class"mb-3">
+		<label>Position name</label>
+		<input asp-for="Name" />
+		<span asp-validation-for="Name"></span>
+	</div>
+	<div class"mb-3">
+		<label>Salary of position</label>
+		<input asp-for="Salary" />
+		<span asp-validation-for="Salary"></span>
+	</div>
+	<button type="submit">Add position</button>
+	<button><a asp-controller="Position" asp-action="Index">Return to all positions</a></button>
+
+</form>
+Footer
+© 2022 GitHub, Inc.

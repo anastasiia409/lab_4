@@ -1,0 +1,32 @@
+﻿@model Project
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit book</h1>
+<form method="post" asp-action="Edit">
+	<div class"mb-3">
+		<label>Project name</label>
+		<input asp-for="Name" />
+		<span asp-validation-for="Name"></span>
+	</div>
+	<div class"mb-3">
+		<label>Project DateOfStart</label>
+		<input asp-for="DateOfStart" />
+		<span asp-validation-for="DateOfStart"></span>
+	</div>
+	<div class"mb-3">
+		<label>Project DateOfEnd</label>
+		<input asp-for="DateOfEnd" min=1 />
+		<span asp-validation-for="DateOfEnd"></span>
+	</div>
+	<div class"mb-3">
+		<label>Description of project</label>
+		<input asp-for="Description" min = 1/>
+		<span asp-validation-for="Description"></span>
+	</div>
+	<button type="submit">Edit project</button>
+	<button><a asp-controller="Project" asp-action="Index">Return to all projects</a></button>
+
+</form>

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<EmployeeProject>
+@{
+    ViewData["Title"] = "Index";
+}
+@if(TempData["success"] != null)
+{
+    <h1>@TempData["success"]</h1>
+}
+<h1>Tickets</h1>
+<a asp-controller="EmployeeProject" asp-action="Create" class="btn btn-primary">Create new employee's projects</a>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                ID EmployeeProject
+            </th>
+            <th>
+                Name of project
+            </th>
+            <th>
+                Employee's name
+            </th>
+            <th>
+                Name of position
+            </th>
+            <th>
+                Date of join
+            </th>
+            
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var eproject in Model)
+        {
+            <tr>
+                <td>
+                    @eproject.Id
+                </td>
+                <td>
+                    @eproject.Project.Name
+                </td>
+                <td>
+                    @eproject.Employee.Name
+                </td>
+                <td>
+                    @eproject.Position.Name
+                </td>
+                <td>
+                    @eproject.DateOfJoin
+                </td>
+                
+                <td>
+                    <a asp-controller="Ticket" asp-action="Delete" asp-route-id="@eproject.Id" class="btn btn-danger">Delete information</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

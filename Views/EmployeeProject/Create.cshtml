@@ -1,0 +1,38 @@
+﻿@model EmployeeProject
+
+
+<h1>Create new EmployeeProject</h1>
+
+<form method="post">
+	<div class"mb-3">
+		<label>Choose project</label>
+		<select asp-for="ProjectId" asp-items="@ViewBag.Projects">
+			<option>Choose projecr</option>
+		</select>
+		<span asp-validation-for="ProjectId"></span>
+	</div>
+
+	<div class"mb-3">
+		<label>Choose employee</label>
+		<select asp-for="EmployeeId" asp-items="@ViewBag.Employees">
+			<option>Choose projecr</option>
+		</select>
+		<span asp-validation-for="EmployeeId"></span>
+	</div>
+	<div class"mb-3">
+		<label>Choose position pf employee</label>
+		<select asp-for="PositionId" asp-items="@ViewBag.Positions">
+			<option>Choose projecr</option>
+		</select>
+		<span asp-validation-for="PositionId"></span>
+	</div>
+	<div class"mb-3">
+		<label>DateOfJoin</label>
+		<input asp-for="DateOfJoin" />
+		<span asp-validation-for="DateOfJoin"></span>
+	</div>
+	
+	<button type="submit">Create new employee's project'</button>
+	<button><a asp-controller="EmployeeProject" asp-action="Index">Return to all EmployeeProjects</a></button>
+
+</form>

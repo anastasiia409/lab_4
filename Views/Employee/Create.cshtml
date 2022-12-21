@@ -1,0 +1,30 @@
+﻿@model Employee
+
+<h1>Add new employee</h1>
+<form method="post">
+	<div class"mb-3">
+		<label>Employee name</label>
+		<input asp-for="Name" />
+		<span asp-validation-for="Name"></span>
+	</div>
+	<div class"mb-3">
+		<label>Employee surname</label>
+		<input asp-for="Surname" />
+		<span asp-validation-for="Surname"></span>
+	</div>
+	<div class"mb-3">
+		<label>Address</label>
+		<input asp-for="Address" min=1 />
+		<span asp-validation-for="Address"></span>
+	</div>
+	<div class"mb-3">
+		<label>Description of employee</label>
+		<input asp-for="Description" min = 1/>
+		<span asp-validation-for="Description"></span>
+	</div>
+	<button type="submit">Add employee</button>
+	<button><a asp-controller="Employee" asp-action="Index">Return to all employees</a></button>
+
+</form>
+Footer
+© 2022 GitHub, Inc.
